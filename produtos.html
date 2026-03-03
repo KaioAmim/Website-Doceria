@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/produtos.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Produtos - Cantinho Doce da Dani</title>
+</head>
+<body>
+    <!-- MENU -->
+    <header class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> <span class="menu-text">Início</span></a></li>
+            <li><a href="produtos.html" class="active"><i class="fa-solid fa-birthday-cake"></i> <span class="menu-text">Produtos</span></a></li>
+            <li><a href="sobre.html"><i class="fa-solid fa-user"></i> <span class="menu-text">Sobre</span></a></li>
+            <li><a href="contato.html"><i class="fa-solid fa-phone"></i> <span class="menu-text">Contato</span></a></li>
+            <!-- CARRINHO -->
+            <li><a id="carrinho" href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Carrinho</span> <span class="cart-badge">0</span></a></li>
+        </ul>
+    </header>
+    <!-- FIM MENU -->
+
+    <main>
+        <!-- HERO PRODUTOS -->
+        <section class="produtos-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Nossos <span class="highlight">Produtos</span></h1>
+                <p class="hero-subtitle">Delícias artesanais feitas com amor, carinho e os melhores ingredientes</p>
+            </div>
+        </section>
+
+        <!-- FILTROS -->
+        <section class="filtros-section">
+            <div class="container">
+                <div class="filtros">
+                    <button class="filtro-btn active" data-filter="todos">
+                        <i class="fa-solid fa-border-all"></i> Todos
+                    </button>
+                    <button class="filtro-btn" data-filter="bolos">
+                        <i class="fa-solid fa-cake-candles"></i> Bolos
+                    </button>
+                    <button class="filtro-btn" data-filter="brigadeiros">
+                        <i class="fa-solid fa-cookie"></i> Brigadeiros
+                    </button>
+                    <button class="filtro-btn" data-filter="mousses">
+                        <i class="fa-solid fa-ice-cream"></i> Doce do Amor
+                    </button>
+                    <button class="filtro-btn" data-filter="potes">
+                        <i class="fa-solid fa-jar"></i> Potes
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOLOS -->
+        <section class="produtos-section">
+            <div class="container">
+                <div class="categoria-header">
+                    <div class="categoria-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h2>Bolos que Encantam o Paladar</h2>
+                    <p>Bolos artesanais feitos com receitas especiais e muito amor</p>
+                </div>
+
+                <div class="produtos-grid">
+                    <!-- BOLO 1 -->
+                    <div class="produto-card" data-categoria="bolos">
+                        <div class="produto-badge bestseller">Mais Vendido</div>
+                        <div class="produto-image">
+                            <img src="img/BoloCenoura.jpg" alt="Bolo de Cenoura">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(127)</span>
+                            </div>
+                            <h3>Bolo de Cenoura Mágico</h3>
+                            <p>Com cobertura de chocolate cremosa irresistível</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 29,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOLO 2 -->
+                    <div class="produto-card" data-categoria="bolos">
+                        <div class="produto-badge new">Novidade</div>
+                        <div class="produto-image">
+                            <img src="img/BoloLimao.jpg" alt="Bolo de Limão">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(98)</span>
+                            </div>
+                            <h3>Bolo de Limão Encantado</h3>
+                            <p>Refrescante e leve com glacê suave</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 29,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOLO 3 -->
+                    <div class="produto-card" data-categoria="bolos">
+                        <div class="produto-badge premium">Premium</div>
+                        <div class="produto-image">
+                            <img src="img/B2A.jpg" alt="Bolo Dois Amores">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(156)</span>
+                            </div>
+                            <h3>Bolo Dois Amores</h3>
+                            <p>Chocolate e leite condensado em perfeita harmonia</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 29,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOLO 4 -->
+                    <div class="produto-card" data-categoria="bolos">
+                        <div class="produto-badge premium">Premium</div>
+                        <div class="produto-image">
+                            <img src="img/BoloNinho.jpg" alt="Bolo de Ninho">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(203)</span>
+                            </div>
+                            <h3>Bolo de Ninho</h3>
+                            <p>Irresistível sabor de leite ninho</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 34,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOLO 5 -->
+                    <div class="produto-card" data-categoria="bolos">
+                        <div class="produto-image">
+                            <img src="img/BoloChurros.jpg" alt="Bolo de Churros">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(142)</span>
+                            </div>
+                            <h3>Bolo de Churros</h3>
+                            <p>Sabor único de churros em forma de bolo</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 32,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOLO 6 -->
+                    <div class="produto-card" data-categoria="bolos">
+                        <div class="produto-image">
+                            <img src="img/BoloNinhoGeleia.jpg" alt="Bolo de Ninho com Geleia">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(178)</span>
+                            </div>
+                            <h3>Bolo de Ninho com Geleia</h3>
+                            <p>Ninho cremoso com geleia de morango</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 36,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRIGADEIROS -->
+        <section class="produtos-section alt-bg">
+            <div class="container">
+                <div class="categoria-header">
+                    <div class="categoria-icon">
+                        <i class="fa-solid fa-cookie"></i>
+                    </div>
+                    <h2>Brigadeiros Gourmet</h2>
+                    <p>Brigadeiros artesanais com sabores únicos e especiais</p>
+                </div>
+
+                <div class="produtos-grid">
+                    <!-- BRIGADEIRO 1 -->
+                    <div class="produto-card" data-categoria="brigadeiros">
+                        <div class="produto-badge bestseller">Mais Vendido</div>
+                        <div class="produto-image">
+                            <img src="img/BB1.jpg" alt="Brigadeiro Tradicional">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(245)</span>
+                            </div>
+                            <h3>Bombom Tradicional</h3>
+                            <p>O clássico que nunca sai de moda</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">PORÇÃO INDIVIDUAL</span>
+                                    <span class="price-value">R$ 8,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BRIGADEIRO 2 -->
+                    <div class="produto-card" data-categoria="brigadeiros">
+                        <div class="produto-image">
+                            <img src="img/MM2.jpg" alt="Brigadeiro Branco">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(189)</span>
+                            </div>
+                            <h3>Bombom Morango c/ Maracujá</h3>
+                            <p>Delicado sabor de Maracujá com morango suculento por dentro</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Porção individual</span>
+                                    <span class="price-value">R$ 9,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BRIGADEIRO 3 -->
+                    <div class="produto-card" data-categoria="brigadeiros">
+                        <div class="produto-badge new">Novidade</div>
+                        <div class="produto-image">
+                            <img src="img/BB3.jpg" alt="Brigadeiro Gourmet">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(167)</span>
+                            </div>
+                            <h3>Brigadeiro Gourmet Mix</h3>
+                            <p>Variedade de sabores especiais</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Porção individual</span>
+                                    <span class="price-value">R$ 11,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUTOS DO AMOR  -->
+        <section class="produtos-section">
+            <div class="container">
+                <div class="categoria-header">
+                    <div class="categoria-icon">
+                        <i class="fa-solid fa-ice-cream"></i>
+                    </div>
+                    <h2>Morango do Amor</h2>
+                    <p>Delícias com morango para adoçar qualquer momento</p>
+                </div>
+
+                <div class="produtos-grid">
+                    <!-- MORANGO DO AMOR -->
+                    <div class="produto-card" data-categoria="mousses">
+                        <div class="produto-badge bestseller">Mais Vendido</div>
+                        <div class="produto-image">
+                            <img src="img/MA1.jpg" alt="Mousse de Maracujá">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(198)</span>
+                            </div>
+                            <h3>Morango do amor</h3>
+                            <p>Sabor intenso de morango fresco</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Porção individual</span>
+                                    <span class="price-value">R$ 12,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOUSSE 2 -->
+                    <div class="produto-card" data-categoria="mousses">
+                        <div class="produto-image">
+                            <img src="img/UA.jpg" alt="Mousse de Morango">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                                    <div class="produto-badge new">Novidade</div>
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(176)</span>
+                            </div>
+                            <h3> Uva c/ Brigadeiro de Maracuja</h3>
+                            <p>Sabor de maracujá com 4 uvas irresistíveis por dentro</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Porção individual</span>
+                                    <span class="price-value">R$ 12,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UVA DO AMOR -->
+                    <div class="produto-card" data-categoria="mousses">
+                        <div class="produto-image">
+                            <img src="img/UvaU1.jpg" alt="Mousse Especial">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(212)</span>
+                            </div>
+                            <h3>Uva do Amor</h3>
+                            <p>Receita exclusiva da casa</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">CAIXA COM 6 UNIDADES</span>
+                                    <span class="price-value">R$ 14,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trio -->
+                      <div class="produto-card" data-categoria="mousses">
+                        <div class="produto-image ">
+                            <img src="img/Trio1.jpg" alt="Mousse de Morango">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                                    <div class="produto-badge bestseller">Mais Vendido</div>
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(176)</span>
+                            </div>
+                            <h3>Combo Morango do Amor</h3>
+                            <p>Pote c/ 3 unidades de morango do amor diversificadas</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Caixa com 3 unidades</span>
+                                    <span class="price-value">R$ 32,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POTES -->
+        <section class="produtos-section alt-bg">
+            <div class="container">
+                <div class="categoria-header">
+                    <div class="categoria-icon">
+                        <i class="fa-solid fa-jar"></i>
+                    </div>
+                    <h2>Potes Deliciosos</h2>
+                    <p>Doces em potes práticos e saborosos</p>
+                </div>
+
+                <div class="produtos-grid">
+                    <!-- POTE 1 -->
+                    <div class="produto-card" data-categoria="potes">
+                        <div class="produto-badge bestseller">Mais Vendido</div>
+                        <div class="produto-image">
+                            <img src="img/PoteBB1.jpg" alt="Pote de Brigadeiro">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(267)</span>
+                            </div>
+                            <h3>Pote de Brigadeiro c/ Morango</h3>
+                            <p>Brigadeiro cremoso em pote individual</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Pote 200ml</span>
+                                    <span class="price-value">R$ 15,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POTE 2 -->
+                    <div class="produto-card" data-categoria="potes">
+                        <div class="produto-image">
+                            <img src="img/PoteMA.jpg" alt="Pote de Maracujá">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(189)</span>
+                            </div>
+                            <h3>Pote de Morango c/ Maracujá</h3>
+                            <p>Doce de maracujá cremoso e refrescante</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Pote 200ml</span>
+                                    <span class="price-value">R$ 14,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POTE 3 -->
+                    <div class="produto-card" data-categoria="potes">
+                        <div class="produto-badge new">Novidade</div>
+                        <div class="produto-image">
+                            <img src="img/PoteUva.jpg" alt="Pote de Uva">
+                            <div class="produto-overlay">
+                                <button class="quick-view-btn">
+                                    <i class="fa-solid fa-eye"></i> Visualizar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="produto-content">
+                            <div class="produto-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(134)</span>
+                            </div>
+                            <h3>Pote de Brigadeiro c/ Uva</h3>
+                            <p>Doce de uva artesanal</p>
+                            <div class="produto-footer">
+                                <div class="produto-price">
+                                    <span class="price-label">Pote 200ml</span>
+                                    <span class="price-value">R$ 16,99</span>
+                                </div>
+                                <button class="add-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <i class="fa-solid fa-heart"></i>
+                    <h2>Não encontrou o que procurava?</h2>
+                    <p>Entre em contato conosco! Criamos doces personalizados especialmente para você.</p>
+                    <a href="https://wa.me/5517992792100" class="btn btn-whatsapp" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> Fale Conosco no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+                    <h3>Cantinho Doce da Dani</h3>
+                </div>
+                <p>Doces artesanais feitos com amor para tornar seus momentos ainda mais especiais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fa-brands fa-whatsapp"></i> +55 (17) 99279-2100</li>
+                    <li><i class="fa-solid fa-envelope"></i> contato@cantinhodoce.com.br</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. L7, Barretos, SP</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/cantinhodocedani?igsh=MTdxeXJ0Mm8zeTA3cw==" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    <a href="https://wa.me/5517992792100" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cantinho Doce da Dani. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- FIM RODAPÉ -->
+</body>
+</html>
+

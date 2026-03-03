@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/contato.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contato - Cantinho Doce da Dani</title>
+</head>
+<body>
+    <!-- MENU -->
+    <header class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> <span class="menu-text">Início</span></a></li>
+            <li><a href="produtos.html"><i class="fa-solid fa-birthday-cake"></i> <span class="menu-text">Produtos</span></a></li>
+            <li><a href="sobre.html"><i class="fa-solid fa-user"></i> <span class="menu-text">Sobre</span></a></li>
+            <li><a href="contato.html" class="active"><i class="fa-solid fa-phone"></i> <span class="menu-text">Contato</span></a></li>
+            <!-- CARRINHO -->
+            <li><a id="carrinho" href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Carrinho</span> <span class="cart-badge">0</span></a></li>
+        </ul>
+    </header>
+    <!-- FIM MENU -->
+
+    <main>
+        <!-- HERO CONTATO -->
+        <section class="contato-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Entre em <span class="highlight">Contato</span></h1>
+                <p class="hero-subtitle">Estamos sempre prontos para ouvir você e responder suas dúvidas</p>
+            </div>
+        </section>
+
+        <!-- CONTATO PRINCIPAL -->
+        <section class="contato-principal">
+            <div class="container">
+                <div class="contato-grid">
+                    <!-- FORMULÁRIO -->
+                    <div class="contato-form-section">
+                        <h2 class="section-title">Envie uma Mensagem</h2>
+                        <p class="form-subtitle">Preencha o formulário abaixo e entraremos em contato em breve!</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nome">
+                                    <i class="fa-solid fa-user"></i> Nome Completo
+                                </label>
+                                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fa-solid fa-envelope"></i> Email
+                                </label>
+                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone">
+                                    <i class="fa-solid fa-phone"></i> Telefone
+                                </label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="assunto">
+                                    <i class="fa-solid fa-tag"></i> Assunto
+                                </label>
+                                <select id="assunto" name="assunto" required>
+                                    <option value="">Selecione um assunto</option>
+
+                                    <option value="duvida">Dúvida sobre Produtos</option>
+                                    <option value="personalizacao">Pedido Personalizado</option>
+                                    <option value="evento">Evento Especial</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensagem">
+                                    <i class="fa-solid fa-message"></i> Mensagem
+                                </label>
+                                <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                            </button>
+                        </form>
+
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                    </div>
+
+                    <!-- INFORMAÇÕES DE CONTATO -->
+                    <div class="contato-info-section">
+                        <h2 class="section-title">Informações de Contato</h2>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>WhatsApp</h3>
+                                <p class="info-text">+55 (17) 99279-2100</p>
+                                <a href="https://wa.me/5517992792100" target="_blank" class="info-link">
+                                    Enviar mensagem <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p class="info-text">contato@cantinhodoce.com.br</p>
+                                <a href="mailto:contato@cantinhodoce.com.br" class="info-link">
+                                    Enviar email <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Endereço</h3>
+                                <p class="info-text">Av. L7, Barretos, Sao Paulo, 14787-0</p>
+                                <a href="https://www.google.com/maps/search/Av.+L7,+Barretos,+Sao+Paulo,+14787-0" target="_blank" class="info-link">
+                                    Ver no mapa <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Horário de Atendimento</h3>
+                                <p class="info-text">
+                                    <strong>Segunda a Sexta:</strong> 8h às 18h<br>
+                                    <strong>Sábado:</strong> 8h às 14h<br>
+                                    <strong>Domingo:</strong> Fechado
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="social-section">
+                            <h3>Siga-nos nas Redes Sociais</h3>
+                            <div class="social-icons">
+
+                                <a href="https://www.instagram.com/cantinhodocedani?igsh=MTdxeXJ0Mm8zeTA3cw==" target="_blank" class="social-icon" title="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <a href="https://wa.me/5517992792100" target="_blank" class="social-icon" title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAPA INTERATIVO -->
+        <section class="mapa-section">
+            <div class="container">
+                <h2 class="section-title">Nos Encontre</h2>
+                <div class="mapa-container">
+                    <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1868.0582592855123!2d-48.589495!3d-20.542412950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb84e5618deac7%3A0xde4d11006afce8f3!2sAv.%20L-%20Sete%20-%20Los%20Angeles%2C%20Barretos%20-%20SP%2C%2014787-059!5e0!3m2!1spt-BR!2sbr!4v1764349200209!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Dúvidas Frequentes</span>
+                    <h2 class="section-title">Perguntas e Respostas</h2>
+                    <p class="section-subtitle">Encontre respostas para as perguntas mais comuns</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Como faço um pedido?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Você pode fazer um pedido através do WhatsApp, enviando um email ou preenchendo o formulário de contato. Entraremos em contato para confirmar os detalhes do seu pedido.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Qual é o prazo de entrega?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O prazo de entrega varia de 1 a 3 dias úteis, dependendo da quantidade e complexidade do pedido. Pedidos personalizados podem levar até 7 dias.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Vocês fazem pedidos personalizados?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Fazemos pedidos personalizados para eventos especiais, aniversários, casamentos e muito mais. Entre em contato para discutir suas ideias.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Qual é a forma de pagamento?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Aceitamos PIX, transferência bancária, dinheiro na entrega e cartão de crédito. Escolha a forma que melhor se adequa a você.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Vocês entregam em toda a cidade?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Entregamos em São Paulo e região metropolitana. Para pedidos fora dessa área, entre em contato para verificar a possibilidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Vocês têm opções sem glúten ou sem lactose?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, podemos preparar doces sem glúten e sem lactose sob encomenda. Consulte-nos sobre as opções disponíveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-final-section">
+            <div class="container">
+                <div class="cta-content">
+                    <i class="fa-solid fa-heart"></i>
+                    <h2>Não vê a hora de provar nossos doces?</h2>
+                    <p>Faça seu pedido agora mesmo pelo WhatsApp!</p>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Pedir pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+                    <h3>Cantinho Doce da Dani</h3>
+                </div>
+                <p>Doces artesanais feitos com amor para tornar seus momentos ainda mais especiais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fa-brands fa-whatsapp"></i> +55 (17) 99279-2100</li>
+                    <li><i class="fa-solid fa-envelope"></i> contato@cantinhodoce.com.br</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. L7, Barretos, SP</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/cantinhodocedani?igsh=MTdxeXJ0Mm8zeTA3cw==" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    <a href="https://wa.me/5517992792100" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cantinho Doce da Dani. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- FIM RODAPÉ -->
+</body>
+</html>

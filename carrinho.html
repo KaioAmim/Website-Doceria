@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/carrinho.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/pix.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Carrinho - Cantinho Doce da Dani</title>
+</head>
+<body>
+    <!-- MENU -->
+    <header class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> <span class="menu-text">Início</span></a></li>
+            <li><a href="produtos.html"><i class="fa-solid fa-birthday-cake"></i> <span class="menu-text">Produtos</span></a></li>
+            <li><a href="sobre.html"><i class="fa-solid fa-user"></i> <span class="menu-text">Sobre</span></a></li>
+            <li><a href="contato.html"><i class="fa-solid fa-phone"></i> <span class="menu-text">Contato</span></a></li>
+            <!-- CARRINHO -->
+            <li><a id="carrinho-link" href="carrinho.html" class="active"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Carrinho</span> <span class="cart-badge">0</span></a></li>
+        </ul>
+    </header>
+    <!-- FIM MENU -->
+
+    <main class="carrinho-main">
+        <section class="carrinho-section">
+            <div class="container">
+                <h1 class="section-title">Seu Carrinho de Compras</h1>
+                
+                <div class="carrinho-top-content">
+                    <!-- 1. Itens do Carrinho -->
+                    <div class="carrinho-itens">
+                        <div id="lista-itens-carrinho">
+                            <!-- Itens serão injetados aqui pelo JavaScript -->
+                            <p class="carrinho-vazio-msg">Seu carrinho está vazio. Adicione algumas delícias!</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Resumo do Pedido -->
+                    <div class="carrinho-resumo-container">
+                        <div class="carrinho-resumo">
+                            <h2>Resumo do Pedido</h2>
+                            <div class="resumo-linha">
+                                <span>Subtotal:</span>
+                                <span id="subtotal-valor">R$ 0,00</span>
+                            </div>
+                            <div class="resumo-linha taxa-entrega">
+                                <span>Taxa de Entrega:</span>
+                                <span id="taxa-entrega-valor">R$ 7,00</span>
+                            </div>
+                            <div class="resumo-linha total">
+                                <strong>Total:</strong>
+                                <strong id="total-valor">R$ 7,00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Formulário de Checkout -->
+                <div class="carrinho-checkout">
+                    <h2>Informações de Entrega e Pagamento</h2>
+                    <form id="checkout-form" action="processar_pedido.php" method="POST">
+                        
+                        <!-- Dados Pessoais -->
+                        <fieldset>
+                            <legend>Seus Dados</legend>
+                            <div class="form-group">
+                                <label for="nome">Nome Completo:</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone (WhatsApp):</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- Endereço -->
+                        <fieldset>
+                            <legend>Endereço de Entrega</legend>
+                            <div class="form-group">
+                                <label for="endereco">Rua e Número:</label>
+                                <input type="text" id="endereco" name="endereco" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="complemento">Complemento (Opcional):</label>
+                                <input type="text" id="complemento" name="complemento">
+                            </div>
+                        </fieldset>
+
+                        <!-- Pagamento -->
+                        <fieldset>
+                            <legend>Método de Pagamento</legend>
+                            <div class="pagamento-opcoes">
+                                <!-- PIX -->
+                                <label class="pagamento-opcao">
+                                    <input type="radio" name="pagamento" value="pix" required>
+                                    <div class="pagamento-card">
+                                        <i class="fa-solid fa-qrcode"></i>
+                                        <span>PIX</span>
+                                    </div>
+                                </label>
+
+                                <!-- Cartão -->
+                                <label class="pagamento-opcao">
+                                    <input type="radio" name="pagamento" value="cartao" required>
+                                    <div class="pagamento-card">
+                                        <i class="fa-solid fa-credit-card"></i>
+                                        <span>Cartão</span>
+                                    </div>
+                                </label>
+
+                                <!-- Dinheiro -->
+                                <label class="pagamento-opcao">
+                                    <input type="radio" name="pagamento" value="dinheiro" required>
+                                    <div class="pagamento-card">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>Dinheiro</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="form-group" id="troco-group" style="display: none;">
+                                <label for="troco">Precisa de troco para quanto?</label>
+                                <input type="number" id="troco" name="troco" placeholder="Ex: 50.00" step="0.01">
+                            </div>
+
+                            <!-- Área PIX -->
+                            <div id="pix-area" style="display: none;">
+                                <div class="pix-container">
+                                    <h3>Pagamento via PIX</h3>
+                                    <p class="pix-instrucoes">Escaneie o QR Code abaixo ou copie a chave PIX para realizar o pagamento</p>
+                                    
+                                    <div class="pix-qrcode-container">
+                                        <div id="qrcode"></div>
+                                    </div>
+                                    
+                                    <div class="pix-info">
+                                        <div class="pix-valor">
+                                            <span class="pix-label">Valor total:</span>
+                                            <span id="pix-valor-total" class="pix-valor-destaque">R$ 0,00</span>
+                                        </div>
+                                        <div class="pix-chave-container">
+                                            <label class="pix-label">PIX Copia e Cola:</label>
+                                            <div class="pix-chave-input-group">
+                                                <input type="text" id="pix-chave" readonly value="">
+                                                <button type="button" id="copiar-pix" class="btn-copiar-pix">
+                                                    <i class="fa-solid fa-copy"></i> Copiar
+                                                </button>
+                                            </div>
+                                            <p class="pix-info-texto">Copie o código acima e cole no seu app de pagamento, ou escaneie o QR Code. O valor já está incluído!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" id="finalizar-pedido-btn" class="btn-finalizar-pedido">
+                            <i class="fa-brands fa-whatsapp"></i> Enviar Pedido por WhatsApp
+                        </button>
+                        <p class="aviso-whatsapp">Ao clicar, você será redirecionado para o WhatsApp com o pedido pronto.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+ <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+                    <h3>Cantinho Doce da Dani</h3>
+                </div>
+                <p>Doces artesanais feitos com amor para tornar seus momentos ainda mais especiais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fa-brands fa-whatsapp"></i> +55 (17) 99279-2100</li>
+                    <li><i class="fa-solid fa-envelope"></i> contato@cantinhodoce.com.br</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. L7, Barretos, SP</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/cantinhodocedani?igsh=MTdxeXJ0Mm8zeTA3cw==" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    <a href="https://wa.me/5517992792100" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cantinho Doce da Dani. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- FIM RODAPÉ -->
+</body>
+</html>

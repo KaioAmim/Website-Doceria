@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cantinho Doce da Dani - Doces Artesanais</title>
+</head>
+<body>
+    <!-- MENU -->
+    <header class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> <span class="menu-text">Início</span></a></li>
+            <li><a href="produtos.html"><i class="fa-solid fa-birthday-cake"></i> <span class="menu-text">Produtos</span></a></li>
+            <li><a href="sobre.html"><i class="fa-solid fa-user"></i> <span class="menu-text">Sobre</span></a></li>
+            <li><a href="contato.html"><i class="fa-solid fa-phone"></i> <span class="menu-text">Contato</span></a></li>
+            <!-- CARRINHO -->
+            <li><a id="carrinho" href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Carrinho</span> <span class="cart-badge">0</span></a></li>
+        </ul>
+    </header>
+    <!-- FIM MENU -->
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="inicio">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Feito com Amor</span>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h1 class="hero-title">Bem-vindo ao<br><span class="highlight">Cantinho Doce da Dani</span></h1>
+                <p class="hero-subtitle">Delícias artesanais feitas com amor, carinho e os melhores ingredientes<br>para tornar seus momentos ainda mais especiais e inesquecíveis.</p>
+                <div class="hero-buttons">
+                    <a href="produtos.html" class="btn btn-primary">
+                        <i class="fa-solid fa-birthday-cake"></i> Ver Produtos
+                    </a>
+                    <a href="sobre.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-heart"></i> Nossa História
+                    </a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>100% Artesanal</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Entrega Rápida</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <span>Qualidade Garantida</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="floating-icon icon-1"><i class="fa-solid fa-cookie"></i></div>
+                <div class="floating-icon icon-2"><i class="fa-solid fa-cupcake"></i></div>
+                <div class="floating-icon icon-3"><i class="fa-solid fa-ice-cream"></i></div>
+                <div class="floating-icon icon-4"><i class="fa-solid fa-candy-cane"></i></div>
+            </div>
+        </section>
+
+        <!-- DESTAQUES -->
+        <section class="destaques">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Nossos Favoritos</span>
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                    <p class="section-subtitle">Conheça os doces mais amados pelos nossos clientes</p>
+                </div>
+                <div class="destaques-grid">
+                    <div class="destaque-card">
+                        <div class="destaque-badge">Mais Vendido</div>
+                        <div class="destaque-image">
+                            <img src="img/BoloCenoura.jpg" alt="Bolo de Cenoura">
+                        </div>
+                        <div class="destaque-content">
+                            <h3>Bolo de Cenoura</h3>
+                            <p>Com cobertura de chocolate cremosa</p>
+                            <div class="destaque-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(127 avaliações)</span>
+                            </div>
+                            <div class="destaque-price">R$ 29,99</div>
+                            <a href="produtos.html" class="destaque-btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-badge special">Novidade</div>
+                        <div class="destaque-image">
+                            <img src="img/B2A.jpg" alt="Bolo Dois Amores">
+                        </div>
+                        <div class="destaque-content">
+                            <h3>Bolo Dois Amores</h3>
+                            <p>Chocolate e leite condensado</p>
+                            <div class="destaque-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(89 avaliações)</span>
+                            </div>
+                            <div class="destaque-price">R$ 29,99</div>
+                            <a href="produtos.html" class="destaque-btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-badge premium">Premium</div>
+                        <div class="destaque-image">
+                            <img src="img/BoloNinho.jpg" alt="Bolo de Ninho">
+                        </div>
+                        <div class="destaque-content">
+                            <h3>Bolo de Ninho</h3>
+                            <p>Irresistível sabor de leite ninho</p>
+                            <div class="destaque-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(156 avaliações)</span>
+                            </div>
+                            <div class="destaque-price">R$ 34,99</div>
+                            <a href="produtos.html" class="destaque-btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="about-image-wrapper">
+                            <img src="img/logo.png" alt="Cantinho Doce da Dani">
+                            <div class="about-badge">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>Desde 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <span class="section-badge">Nossa História</span>
+                        <h2 class="section-title">Feito com Amor e Dedicação</h2>
+                        <p class="about-text">
+                            O <strong>Cantinho Doce da Dani</strong> nasceu do amor pela confeitaria e do desejo de levar alegria através dos doces. Cada receita é cuidadosamente preparada com ingredientes selecionados e muito carinho.
+                        </p>
+                        <p class="about-text">
+                            Nossa missão é transformar momentos simples em memórias especiais, oferecendo doces artesanais que encantam o paladar e aquecem o coração. Cada bolo, cada doce, é uma obra de arte feita especialmente para você.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Clientes Felizes</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Receitas Únicas</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Artesanal</div>
+                            </div>
+                        </div>
+                        <a href="produtos.html" class="btn btn-primary">Conheça Nossos Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="diferenciais">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Por Que Escolher</span>
+                    <h2 class="section-title">Nossos Diferenciais</h2>
+                </div>
+                <div class="diferenciais-grid">
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Feito com Amor</h3>
+                        <p>Cada doce é preparado com dedicação e carinho, como se fosse para nossa própria família.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3>Ingredientes Selecionados</h3>
+                        <p>Utilizamos apenas ingredientes de primeira qualidade para garantir o melhor sabor.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Sempre Fresquinho</h3>
+                        <p>Produção diária para garantir que você receba produtos sempre frescos e saborosos.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <div class="diferencial-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3>Personalização</h3>
+                        <p>Criamos doces personalizados para tornar suas celebrações ainda mais especiais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+            <div class="container">
+                <div class="contato-grid">
+                    <div class="contato-info">
+                        <span class="section-badge">Fale Conosco</span>
+                        <h2 class="section-title">Entre em Contato</h2>
+                        <p class="contato-text">Estamos prontos para atender você! Entre em contato conosco através das nossas redes sociais ou WhatsApp.</p>
+                        <div class="contato-items">
+                            <div class="contato-item">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>+55 (17) 99279-2100</p>
+                                </div>
+                            </div>
+                            <div class="contato-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>contato@cantinhodoce.com.br</p>
+                                </div>
+                            </div>
+                            <div class="contato-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <div>
+                                    <h4>Horário de Atendimento</h4>
+                                    <p>Seg - Sex: 8h às 18h | Sáb: 8h às 14h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato-cta">
+                        <div class="cta-card">
+                            <i class="fa-solid fa-gift"></i>
+                            <h3>Faça seu Pedido!</h3>
+                            <p>Encomende agora e receba em casa com todo carinho e segurança.</p>
+                            <a href="https://wa.me/5517992792100" class="btn btn-whatsapp" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i> Pedir pelo WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo Cantinho Doce da Dani">
+                    <h3>Cantinho Doce da Dani</h3>
+                </div>
+                <p>Doces artesanais feitos com amor para tornar seus momentos ainda mais especiais.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fa-brands fa-whatsapp"></i> +55 (17) 99279-2100</li>
+                    <li><i class="fa-solid fa-envelope"></i> contato@cantinhodoce.com.br</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. L7, Barretos, SP</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/cantinhodocedani?igsh=MTdxeXJ0Mm8zeTA3cw==" target="_blank" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    <a href="https://wa.me/5517992792100" target="_blank" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cantinho Doce da Dani. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- FIM RODAPÉ -->
+</body>
+</html>
+
